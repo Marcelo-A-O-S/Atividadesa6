@@ -29,7 +29,6 @@ class Program
         Fechar();
 
     }
-
     private static void Fechar()
     {
         Console.WriteLine("Deseja fazer uma nova ordenacao? \n1 - Sim\n2 - Nao, quero sair da aplicacao!");
