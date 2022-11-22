@@ -8,43 +8,22 @@
 
     private static void Menu()
     {
-
-        int[] lista_de_numeros = { 2, 14, 13, 12, 9, 8, 7, 6, 5, 4 };
+        int q;
+        int[] lista_de_numeros;
+        Console.WriteLine("Digite a quantidade de valores que serão adicionados:");
+        q = int.Parse(Console.ReadLine());
+        lista_de_numeros = new int[q];
+        for (int i = 0; i < q; i++)
+        {
+            Console.WriteLine($"Digite o valor que será adicionado a posicao {i + 1}:");
+            lista_de_numeros[i] = int.Parse(Console.ReadLine());
+        }
         int[] n = new int[lista_de_numeros.Length];
-        //Console.WriteLine("Digite a quantidade de valores que serão adicionados:");
-        //n = int.Parse(Console.ReadLine());
-        //lista_de_numeros = new int[n];
-        //for (int i = 0; i < n; i++)
-        //{
-        //    Console.WriteLine($"Digite o valor que será adicionado a posicao {i + 1}:");
-        //    lista_de_numeros[i] = int.Parse(Console.ReadLine());
-        //}
-        
 
-        //MergeSort(lista_de_numeros, n, 0, lista_de_numeros.Length-1);
-        MergeSort2(lista_de_numeros, 0, lista_de_numeros.Length - 1);
+
+
+        MergeSort(lista_de_numeros, n, 0, lista_de_numeros.Length-1);
         Console.WriteLine(String.Join(" ", lista_de_numeros));
-    }
-
-    private static void MergeSort2(int[] lista_de_numeros, int inicio, int fim)
-    {
-        if(inicio < fim)
-        {
-            int meio = (inicio + fim) / 2;
-            MergeSort2(lista_de_numeros, inicio, meio);
-            MergeSort2(lista_de_numeros, meio + 1, fim);
-            Merge_order2(lista_de_numeros, inicio, meio, fim);
-            Console.WriteLine(String.Join(" ", lista_de_numeros));
-        }
-    }
-
-    private static void Merge_order2(int[] lista_de_numeros, int inicio, int meio, int fim)
-    {
-        int lista_da_esquerda = inicio + meio;
-        for(int k = lista_da_esquerda; k < meio; k++)
-        {
-
-        }
     }
 
     private static void MergeSort(int[] lista_de_numeros, int[] n, int inicio, int fim)
