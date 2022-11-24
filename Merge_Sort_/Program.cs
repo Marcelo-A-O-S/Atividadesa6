@@ -68,6 +68,7 @@ class Program
 
         while (i <= meio && j <= fim)
         {
+            
             for (int x = i; x < j; x++)
             {
                 if (valores[x] > valores[x + 1])
